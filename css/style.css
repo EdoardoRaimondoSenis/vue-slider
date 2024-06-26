@@ -44,7 +44,7 @@
     opacity: 0.5;
 }
 
-.imggen {
+.thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;

@@ -17,18 +17,18 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img class="imggen" :src="img" v-for="img in slides.image" alt="Spiderman" />
+                    <img :src="slides[imgScroll].image" alt="Spiderman" />
                     <div class="text">
-                        <h3 v-for="title in slides.title">{{title}}</h3>
-                        <p v-for="text in slides.text">{{text}}</p>
+                        <h3>{{slides[imgScroll].title}}</h3>
+                        <p>{{slides[imgScroll].text}}</p>
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="prevImg"></div>
+                    <div class="next" @click="nextImg"></div>
                     <div class="thumb active">
-                        <img class="imggen" :src="img" v-for="img in slides.image" alt="Svezia" />
+                        <img :src="slide.image" v-for="slide in slides" alt="Svezia" />
                     </div>
                 </div>
 
